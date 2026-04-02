@@ -820,17 +820,30 @@ a.cert-card:hover { transform: translateY(-4px); }
 }
 
 .clients-item {
-  min-width: 50%;
+  min-width: 75%;
   scroll-snap-align: start;
+  flex-shrink: 0;
 }
 
 .clients-item img {
   width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 18px;
+  display: block;
   filter: grayscale(1);
   transition: var(--transition-1);
 }
 
 .clients-item img:hover { filter: grayscale(0); }
+
+.client-title {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  font-size: var(--fs-6);
+  color: var(--light-gray);
+}
 
 
 
@@ -1324,7 +1337,7 @@ textarea.form-input::-webkit-resizer { display: none; }
    * client
    */
 
-  .clients-item { min-width: calc(33.33% - 10px); }
+  .clients-item { min-width: calc(50% - 10px); }
 
 
 
@@ -1565,7 +1578,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     scroll-padding-inline: 45px;
   }
 
-  .clients-item { min-width: calc(33.33% - 35px); }
+  .clients-item { min-width: calc(50% - 35px); }
 
 
 
@@ -1821,7 +1834,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   /* clients */
 
-  .clients-item { min-width: calc(25% - 38px); }
+  .clients-item { min-width: calc(25% - 38px); max-width: 300px; }
 
 
 
